@@ -50,7 +50,7 @@ const thirdPromise = new Promise((resolve) => {
   let leftClick = false;
   let rightClick = false;
 
-  const checkCliks = () => {
+  const checkClicks = () => {
     if (rightClick && leftClick) {
       resolve('Third promise was resolved');
     }
@@ -58,13 +58,13 @@ const thirdPromise = new Promise((resolve) => {
 
   body.addEventListener('click', () => {
     leftClick = true;
-    checkCliks();
+    checkClicks();
   });
 
   body.addEventListener('contextmenu', (e) => {
     e.preventDefault();
     rightClick = true;
-    checkCliks();
+    checkClicks();
   });
 });
 
